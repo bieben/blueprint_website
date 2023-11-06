@@ -6,16 +6,16 @@ import jsx from "lume/plugins/jsx.ts";
 import nav from "lume/plugins/nav.ts";
 
 const site = lume({
-    src: "./src",
-    dest: "./output",
-    emptyDest: false,
-    server: {
+  src: "./src",
+  dest: "./output",
+  emptyDest: false,
+  server: {
     open: true,
-    },
-    location: new URL("https://sitblueprint.com"),
-	watcher: {
-		debounce: 10
-	}
+  },
+  location: new URL("https://sitblueprint.com"),
+  watcher: {
+    debounce: 10,
+  },
 });
 
 site
