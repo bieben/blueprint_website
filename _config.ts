@@ -3,6 +3,7 @@ import tailwindcss from "lume/plugins/tailwindcss.ts";
 import postcss from "lume/plugins/postcss.ts";
 import typography from "npm:@tailwindcss/typography";
 import jsx from "lume/plugins/jsx.ts";
+import nav from "lume/plugins/nav.ts";
 
 const site = lume({
     src: "./src",
@@ -32,6 +33,7 @@ site
 	})
 )
 .use(postcss())
+.use(nav())
 .copy("assets/logos")
 .loadAssets([".css", ".js"])
 .ignore("README.md", "CHANGELOG.md", "node_modules")
