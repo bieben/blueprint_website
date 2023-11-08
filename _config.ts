@@ -19,24 +19,28 @@ const site = lume({
 });
 
 site
-.use(tailwindcss({
-	extensions: [".html", ".js", ".njk"],
-	options: {
-		colors: {
-			'primary': "#0078E8",
-			'secondary': "#93C9FE",
-			'text-color': "#333333",
-			'negative': "#ffffff",
-	},
-		plugins: [typography],
-	},
-	})
-)
-.use(postcss())
-.use(nav())
-.copy("assets/logos")
-.loadAssets([".css", ".js"])
-.ignore("README.md", "CHANGELOG.md", "node_modules")
-.use(jsx());
+  .use(
+    tailwindcss({
+      extensions: [".html", ".js", ".njk", ".jsx"],
+      options: {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0078E8",
+              secondary: "#93C9FE",
+              "text-color": "#333333",
+              negative: "#ffffff",
+            },
+          },
+        },
+        plugins: [typography],
+      },
+    })
+  )
+  .use(postcss())
+  .copy("assets/logos")
+  .loadAssets([".css", ".js"])
+  .ignore("README.md", "CHANGELOG.md", "node_modules")
+  .use(jsx());
 
 export default site;
