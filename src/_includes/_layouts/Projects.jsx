@@ -37,17 +37,15 @@ export default ({ comp, projectCards }) => (
               <strong>Current Projects</strong>
             </h1>
             <div className="w-full grid grid-cols-2 gap-6 lg:px-40 px-20 max-lg:flex max-lg:flex-col">
-              {
-                projectCards.map(project => (
-                  <comp.ProjectCard
-                    title={project.name_organization}
-                    description={project.description}
-                    image_url={project.image_url}
-                    project_tag={project.project_tag}
-                    key={project.name_organization}
-                  />
-                ))
-              }
+              {projectCards.map((project) => (
+                <comp.ProjectCard
+                  title={project.name_organization}
+                  description={project.description}
+                  image_url={project.image_url}
+                  project_tag={project.project_tag}
+                  key={project.name_organization}
+                />
+              ))}
             </div>
           </div>
         </section>

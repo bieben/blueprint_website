@@ -2,8 +2,7 @@ import React from "https://esm.sh/react";
 
 // Global navigation links array
 
-export default function NavigationBar({navbarLinks}) {
-
+export default function NavigationBar({ navbarLinks }) {
   const logo = "/assets/logos/logo_negative.png";
   return (
     <nav className="relative flex items-center justify-between lg:p-6 p-10 bg-primary z-50">

@@ -86,17 +86,15 @@ export default ({ comp, title, projectCards }) => {
             that makes our community more open and connected.
           </p>
           <div className="w-full grid grid-cols-2 gap-6 lg:px-40 px-20 max-lg:flex max-lg:flex-col">
-            {
-              projectCards.map(project => (
-                <comp.ProjectCard
-                  title={project.name_organization}
-                  description={project.description}
-                  image_url={project.image_url}
-                  project_tag={project.project_tag}
-                  key={project.name_organization}
-                />
-              ))
-            }
+            {projectCards.map((project) => (
+              <comp.ProjectCard
+                title={project.name_organization}
+                description={project.description}
+                image_url={project.image_url}
+                project_tag={project.project_tag}
+                key={project.name_organization}
+              />
+            ))}
           </div>
           <comp.Button
             style={
