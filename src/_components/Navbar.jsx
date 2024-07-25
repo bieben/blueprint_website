@@ -1,14 +1,9 @@
 import React from "https://esm.sh/react";
 
 // Global navigation links array
-const navigationLinks = [
-  { href: "/mission", text: "Mission" },
-  { href: "/projects", text: "Projects" },
-  { href: "/community", text: "Get Involved" },
-  { href: "/blog", text: "Blog" },
-];
 
-export default function NavigationBar() {
+export default function NavigationBar({navbarLinks}) {
+
   const logo = "/assets/logos/logo_negative.png";
   return (
     <nav className="relative flex items-center justify-between lg:p-6 p-10 bg-primary z-50">
@@ -24,7 +19,7 @@ export default function NavigationBar() {
       </a>
       {/* Desktop Navigation Menu - Visible only on large screens */}
       <div className="hidden lg:flex space-x-6">
-        {renderDesktopNavigationLinks()}
+        {renderDesktopNavigationLinks(navbarLinks)}
       </div>
       {/* Mobile Menu Toggle and Dropdown - Visible on screens smaller than "large" */}
       <div className="lg:hidden relative">
@@ -40,15 +35,15 @@ export default function NavigationBar() {
         </label>
         {/* Mobile Navigation Menu - Expands and shows when hamburger icon is clicked*/}
         <div className="absolute top-[calc(100%+1rem)] right-2 bg-primary transition-all duration-300 max-h-0 overflow-hidden peer-checked:max-h-screen peer-checked:border peer-checked:border-white peer-checked:rounded-lg peer-checked:shadow-lg w-80">
-          {renderMobileNavigationLinks()}
+          {renderMobileNavigationLinks(navbarLinks)}
         </div>
       </div>
     </nav>
   );
 }
 
-function renderDesktopNavigationLinks() {
-  return navigationLinks.map((link, index) => (
+function renderDesktopNavigationLinks(navbarLinks) {
+  return navbarLinks.map((link, index) => (
     <a
       key={index}
       href={link.href}
@@ -62,8 +57,8 @@ function renderDesktopNavigationLinks() {
   ));
 }
 
-function renderMobileNavigationLinks() {
-  return navigationLinks.map((link, index) => (
+function renderMobileNavigationLinks(navbarLinks) {
+  return navbarLinks.map((link, index) => (
     <a
       key={index}
       href={link.href}
@@ -72,7 +67,7 @@ function renderMobileNavigationLinks() {
         hover:bg-white hover:bg-opacity-10 hover:font-bold
         ${
           // Add a bottom border to all items except the last one
-          index !== navigationLinks.length - 1 ? "border-b border-white" : ""
+          index !== navbarLinks.length - 1 ? "border-b border-white" : ""
         }
       `}
     >

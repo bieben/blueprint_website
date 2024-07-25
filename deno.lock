@@ -1176,6 +1176,7 @@
   "workspace": {
     "packageJson": {
       "dependencies": [
+        "npm:husky@^9.1.2",
         "npm:prettier-plugin-tailwindcss@^0.5.13",
         "npm:prettier@^3.2.5"
       ]
