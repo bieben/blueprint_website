@@ -6,6 +6,7 @@ headline: Blog Headline 2
 description: Example blog post
 author: Shawn Aviles
 date: 2024-02-18
+type: blog-post
 tags:
   - projects
   - npo

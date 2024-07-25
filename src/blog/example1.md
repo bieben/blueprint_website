@@ -6,6 +6,7 @@ headline: Stevens Blueprint Blog Headline
 description: Learn more about Blueprint's History!
 author: Shawn Aviles
 date: 2024-02-15
+type: blog-post
 tags:
   - projects
   - npo

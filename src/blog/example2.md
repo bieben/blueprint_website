@@ -6,6 +6,7 @@ headline: Blog Headline 2
 description: Learn more about Blueprint's History!
 author: Shawn Aviles
 date: 2024-02-10
+type: blog-post
 tags:
   - projects
   - learn
